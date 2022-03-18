@@ -1,4 +1,4 @@
-package Bronze;
+package Baekjoon;
 
 public class print {
 
