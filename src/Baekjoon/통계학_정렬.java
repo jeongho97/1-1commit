@@ -22,20 +22,19 @@ public class 통계학_정렬 {
 			sum+=num;
 			
 		}
-		System.out.printf("%.0f\n", sum/N); //산술평균
 		int i=0;
 		int max=0;
 		int mode=0;
-		boolean flag=true;
+		boolean flag=false;
 		for(int j=0; j<8001; j++)
 		{
 			if(arr[j]>0)
 			{
-				//System.out.println("j값: "+arr[j]);
 				if(max<arr[j])
 				{
 					max=arr[j];
 					mode=j-4000;
+					flag=true;
 				}
 				else if(max==arr[j]&&flag==true) //최빈값이 같은 수가 있을 때
 				{
@@ -56,6 +55,7 @@ public class 통계학_정렬 {
 			}
 		}
 
+		System.out.println((int)Math.round((double)sum/N)); //산술평균
 		double median=(N/2)*1/1.0;
 		System.out.println(arrsort[(int)median]); //중앙값
 		System.out.println(mode);
