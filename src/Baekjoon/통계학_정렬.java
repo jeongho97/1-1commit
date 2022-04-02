@@ -1,11 +1,8 @@
 package Baekjoon;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.Arrays;
 
 public class 통계학_정렬 {
 
@@ -29,23 +26,23 @@ public class 통계학_정렬 {
 		int i=0;
 		int max=0;
 		int mode=0;
+		boolean flag=true;
 		for(int j=0; j<8001; j++)
 		{
 			if(arr[j]>0)
 			{
+				//System.out.println("j값: "+arr[j]);
 				if(max<arr[j])
 				{
 					max=arr[j];
+					mode=j-4000;
 				}
-				else if(max==arr[j])
+				else if(max==arr[j]&&flag==true) //최빈값이 같은 수가 있을 때
 				{
-					if(max<arr[j])
+					if(mode<j-4000)
 					{
-						mode=max;
-					}
-					else
-					{
-						mode=arr[j];
+						mode=j-4000;
+						flag=false; //한번만 교체하면 두번째 값이다.
 					}
 					//최빈값이 여러개 있을때 최빈값 중 두 번째로 작은 값을 출력
 				}
