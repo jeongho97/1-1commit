@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class 덩치등수 {
+public class 덩치등수_브루트포스 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
