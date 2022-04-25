@@ -17,13 +17,10 @@ public class °ıÈ£_½ºÅÃ {
 		
 		int n = Integer.parseInt(reader.readLine());
 		
-		
-		Stack<Character> sc=new Stack<>();
-		
 		for(int i=0;i<n;i++)
 		{
+			Stack<Character> sc=new Stack<>();
 			String str=reader.readLine();
-			//System.out.println(str.length());
 			for(int j=0;j<str.length();j++)
 			{
 				sc.push(str.charAt(j));
@@ -34,34 +31,29 @@ public class °ıÈ£_½ºÅÃ {
 			{
 				
 				char c = sc.pop();
-				System.out.print(count+" "+c+" ");
-				//System.out.println(c);
+
 				if(c=='(')
 				{
 					count-=1;
-					//System.out.println(c+" "+count);
 				}
 				else
 				{
 					count+=1;
-					//System.out.println(c+" "+count);
 				}
 				if(count<0)
 				{
-					//System.out.println("¤Ğ¤Ğ");
-					//count=0;
-					System.out.println("¤Ğ¤Ğ");
+
 					break;
 				}
 			}
 			if(count==0)
 			{
-				System.out.println("YES"+" "+sc.empty());
+				System.out.println("YES");
 				
 			}
 			else
 			{
-				System.out.println("NO"+count+" "+sc.empty());
+				System.out.println("NO");
 			}
 			
 		}
